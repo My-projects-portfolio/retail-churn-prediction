@@ -1,12 +1,7 @@
-
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../output/model_predictions.csv")
+    df = pd.read_csv("output/model_predictions.csv")  # <-- from app/
     return df
 
 df = load_data()
@@ -26,6 +21,7 @@ segment_counts.columns = ['Segment', 'Count']
 st.dataframe(segment_counts)
 
 # Plot Segment Distribution
+import plotly.express as px
 fig = px.pie(segment_counts, values='Count', names='Segment', title='Customer Risk Segment Distribution')
 st.plotly_chart(fig)
 
@@ -39,5 +35,5 @@ st.download_button("Download Filtered Predictions", csv, "filtered_predictions.c
 
 # Show plots
 st.subheader("📉 Evaluation Plots")
-st.image("../output/confusion_matrix.png", caption="Confusion Matrix", use_column_width=True)
-st.image("../output/roc_curve.png", caption="ROC Curve", use_column_width=True)
+st.image("output/confusion_matrix.png", caption="Confusion Matrix", use_column_width=True)
+st.image("output/roc_curve.png", caption="ROC Curve", use_column_width=True)
