@@ -1,4 +1,9 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
 # Load data
+
 @st.cache_data
 def load_data():
     df = pd.read_csv("output/model_predictions.csv")  # <-- from app/
