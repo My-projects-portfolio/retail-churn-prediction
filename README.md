@@ -5,7 +5,7 @@ Welcome to this hands-on machine learning project where we explore how to predic
 This project shows how to use real-world transaction data to identify those at-risk customers, predict the likelihood of churn, and suggest actionable strategies to keep them engaged. Along the way, you’ll also learn how to engineer features, build a predictive model, evaluate it properly, and deploy a simple web app to explore the results.
 
 👉 **Try the live dashboard here:**  
-[[https://retail-churn-prediction-aj325zdzvcvu8wl94bwsdn.streamlit.app/]
+[(https://retail-churn-prediction-kpcyarztegv8uslqcuvh8l.streamlit.app/)]
 
 ---
 
